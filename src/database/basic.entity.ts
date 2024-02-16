@@ -1,8 +1,4 @@
-import {
-  CreateDateColumn,
-  PrimaryGeneratedColumn,
-  UpdateDateColumn,
-} from 'typeorm';
+import { CreateDateColumn, PrimaryGeneratedColumn } from 'typeorm';
 
 export abstract class BasicEntity {
   @PrimaryGeneratedColumn()
@@ -12,9 +8,4 @@ export abstract class BasicEntity {
     type: 'timestamp',
   })
   createdAt: Date = new Date();
-
-  @UpdateDateColumn({
-    type: 'timestamp',
-  })
-  updatedAt: Date = new Date();
 }

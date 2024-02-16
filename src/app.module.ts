@@ -5,9 +5,14 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { UserModule } from './user/user.module';
 import { ForecastModule } from './forecast/forecast.module';
 import { DatabaseConfigService } from './database/database-config.service';
+import { WeatherApiModule } from './weather-api/weather-api.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({
+      envFilePath: '.env',
+    }),
     TypeOrmModule.forRootAsync({
       useClass: DatabaseConfigService,
     }),
@@ -18,6 +23,7 @@ import { DatabaseConfigService } from './database/database-config.service';
     }),
     UserModule,
     ForecastModule,
+    WeatherApiModule,
   ],
 })
 export class AppModule {}

@@ -6,6 +6,8 @@ npm install
 cp .env.dist .env
 ```
 
+WEATHERAPI_API_KEY is required in `.env` file
+
 ## Running the app
 
 ```bash
