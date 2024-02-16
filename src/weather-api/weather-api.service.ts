@@ -16,8 +16,8 @@ import { firstValueFrom } from 'rxjs';
 @Injectable()
 export class WeatherApiService {
   constructor(
-    private readonly configService: ConfigService,
-    private readonly httpService: HttpService,
+    private configService: ConfigService,
+    private httpService: HttpService,
   ) {}
 
   public async fetchByLocationAndTime(

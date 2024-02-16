@@ -8,7 +8,7 @@ import { JwtAuthGuard } from '../auth/guard/jwt-auth.guard';
 
 @Resolver(() => ForecastModel)
 export class ForecastResolver {
-  constructor(private readonly forecastService: ForecastService) {}
+  constructor(private forecastService: ForecastService) {}
 
   @Query(() => [ForecastModel])
   public async getAllForecast(): Promise<ForecastModel[]> {

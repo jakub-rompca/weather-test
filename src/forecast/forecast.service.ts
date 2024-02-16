@@ -44,6 +44,7 @@ export class ForecastService {
   ): Promise<ForecastEntity> {
     const { cloudCover, temperature, windSpeed } =
       await this.weatherApiService.fetchByLocationAndTime(location, time);
+
     return await this.forecastRepository.save({
       location,
       time,

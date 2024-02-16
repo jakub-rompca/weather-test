@@ -9,8 +9,8 @@ import { LoginUserOutput } from './dto/login-user.output';
 @Injectable()
 export class AuthService {
   constructor(
-    private usersService: UserService,
-    private jwtService: JwtService,
+    private readonly usersService: UserService,
+    private readonly jwtService: JwtService,
   ) {}
 
   async registerUser(registerUserInput: RegisterUserInput): Promise<boolean> {
