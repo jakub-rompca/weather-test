@@ -55,7 +55,6 @@ describe('ForecastService', () => {
       ],
       imports: [WeatherApiModule],
     }).compile();
-    // const { unit, unitRef } = TestBed.create(ForecastService).compile();;
 
     service = module.get<ForecastService>(ForecastService);
     repository = module.get<Repository<ForecastEntity>>(
