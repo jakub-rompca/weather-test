@@ -14,10 +14,6 @@ export class ForecastService {
     private readonly weatherApiService: WeatherApiService,
   ) {}
 
-  public async getAll(): Promise<ForecastEntity[]> {
-    return this.forecastRepository.find();
-  }
-
   public async getByLocationAndTime(
     location: LocationEnum,
     time: TimeEnum,
